@@ -1,0 +1,6 @@
+module complemento2_negativos(num, altb, saida);
+	input num, altb;
+	output saida;
+	
+	xor xor0(saida, num, altb);
+endmodule 

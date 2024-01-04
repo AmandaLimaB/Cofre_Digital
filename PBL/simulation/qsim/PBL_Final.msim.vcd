@@ -1,0 +1,496 @@
+$comment
+	File created using the following command:
+		vcd file PBL_Final.msim.vcd -direction
+$end
+$date
+	Tue Oct 04 22:23:30 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module Arquivo_principal_vlg_vec_tst $end
+$var reg 4 ! a [3:0] $end
+$var reg 4 " b [3:0] $end
+$var wire 1 # dig1 $end
+$var wire 1 $ dig2 $end
+$var wire 1 % dig3 $end
+$var wire 1 & dig4 $end
+$var wire 1 ' dig_a $end
+$var wire 1 ( dig_b $end
+$var wire 1 ) dig_c $end
+$var wire 1 * dig_d $end
+$var wire 1 + dig_e $end
+$var wire 1 , dig_f $end
+$var wire 1 - dig_g $end
+$var wire 1 . led_azu $end
+$var wire 1 / led_verd $end
+$var wire 1 0 led_verme $end
+$var wire 1 1 ponto $end
+
+$scope module i1 $end
+$var wire 1 2 gnd $end
+$var wire 1 3 vcc $end
+$var wire 1 4 unknown $end
+$var tri1 1 5 devclrn $end
+$var tri1 1 6 devpor $end
+$var tri1 1 7 devoe $end
+$var wire 1 8 comp_AB|or2~1_combout $end
+$var wire 1 9 comp_AB|xor0~0_combout $end
+$var wire 1 : comp_AB|or2~0_combout $end
+$var wire 1 ; comp_AB|xor1~0_combout $end
+$var wire 1 < comp_AB|or2~2_combout $end
+$var wire 1 = complemento_b|complemento_de2|part2|And1~combout $end
+$var wire 1 > soma_senhas|part2|Or0~0_combout $end
+$var wire 1 ? soma_senhas|part3|Or0~0_combout $end
+$var wire 1 @ comb_8|xnor0~0_combout $end
+$var wire 1 A soma_senhas|part3|Xor1~combout $end
+$var wire 1 B soma_senhas|part2|Xor1~combout $end
+$var wire 1 C complem2|complemento_de2|part2|And1~combout $end
+$var wire 1 D comb_8|xnor0~combout $end
+$var wire 1 E ponto_mostrador|or0~combout $end
+$var wire 1 F soma_senhas|part1|Xor0~combout $end
+$var wire 1 G resul_a|and0~0_combout $end
+$var wire 1 H resul_a|and0~combout $end
+$var wire 1 I resul_c|or0~combout $end
+$var wire 1 J resul_e|and0~combout $end
+$var wire 1 K resul_f|and0~2_combout $end
+$var wire 1 L resul_a|and0~1_combout $end
+$var wire 1 M acend_verde|and0~combout $end
+$var wire 1 N b~combout [3] $end
+$var wire 1 O b~combout [2] $end
+$var wire 1 P b~combout [1] $end
+$var wire 1 Q b~combout [0] $end
+$var wire 1 R a~combout [3] $end
+$var wire 1 S a~combout [2] $end
+$var wire 1 T a~combout [1] $end
+$var wire 1 U a~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0#
+1$
+1%
+1&
+0'
+0(
+0)
+0*
+0+
+0,
+1-
+0.
+1/
+00
+11
+02
+13
+x4
+15
+16
+17
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+1E
+0F
+1G
+0H
+0I
+0J
+0K
+1L
+1M
+0Q
+0P
+0O
+0N
+0U
+0T
+0S
+0R
+$end
+#40000
+b1 !
+b1 "
+1Q
+1U
+1>
+1=
+1?
+1@
+0@
+1D
+0D
+0G
+1G
+0M
+0L
+1I
+10
+1(
+1M
+1L
+0I
+0/
+0-
+1)
+00
+0(
+1/
+1-
+0)
+#80000
+b11 !
+b11 "
+b10 !
+b10 "
+0Q
+1P
+0U
+1T
+#120000
+b11 !
+b11 "
+1Q
+1U
+#160000
+b111 !
+b111 "
+b101 !
+b101 "
+b100 !
+b100 "
+0Q
+0P
+1O
+0U
+0T
+1S
+0>
+0=
+#200000
+b101 !
+b101 "
+1Q
+1U
+1>
+1=
+#240000
+b111 !
+b111 "
+b110 !
+b110 "
+0Q
+1P
+0U
+1T
+#280000
+b111 !
+b111 "
+1Q
+1U
+#320000
+b1111 !
+b1111 "
+b1011 !
+b1011 "
+b1001 !
+b1001 "
+b1000 !
+b1000 "
+0Q
+0P
+0O
+1N
+0U
+0T
+0S
+1R
+0>
+0=
+0?
+1@
+0@
+1D
+0D
+0G
+1G
+0M
+0L
+1I
+10
+1(
+1M
+1L
+0I
+0/
+0-
+1)
+00
+0(
+1/
+1-
+0)
+#360000
+b1001 !
+b1001 "
+1Q
+1U
+1>
+1=
+1?
+1@
+0@
+1D
+0D
+0G
+1G
+0M
+0L
+1I
+10
+1(
+1M
+1L
+0I
+0/
+0-
+1)
+00
+0(
+1/
+1-
+0)
+#400000
+b1011 !
+b1011 "
+b1010 !
+b1010 "
+0Q
+1P
+0U
+1T
+#440000
+b1011 !
+b1011 "
+1Q
+1U
+#480000
+b1111 !
+b1111 "
+b1101 !
+b1101 "
+b1100 !
+b1100 "
+0Q
+0P
+1O
+0U
+0T
+1S
+0>
+0=
+#520000
+b1101 !
+b1101 "
+1Q
+1U
+1>
+1=
+#560000
+b1111 !
+b1111 "
+b1110 !
+b1110 "
+0Q
+1P
+0U
+1T
+#600000
+b1111 !
+b1111 "
+1Q
+1U
+#640000
+b111 !
+b111 "
+b11 !
+b11 "
+b1 !
+b1 "
+b0 !
+b0 "
+0Q
+0P
+0O
+0N
+0U
+0T
+0S
+0R
+0>
+0=
+0?
+1@
+0@
+1D
+0D
+0G
+1G
+0M
+0L
+1I
+10
+1(
+1M
+1L
+0I
+0/
+0-
+1)
+00
+0(
+1/
+1-
+0)
+#680000
+b1 !
+b1 "
+1Q
+1U
+1>
+1=
+1?
+1@
+0@
+1D
+0D
+0G
+1G
+0M
+0L
+1I
+10
+1(
+1M
+1L
+0I
+0/
+0-
+1)
+00
+0(
+1/
+1-
+0)
+#720000
+b11 !
+b11 "
+b10 !
+b10 "
+0Q
+1P
+0U
+1T
+#760000
+b11 !
+b11 "
+1Q
+1U
+#800000
+b111 !
+b111 "
+b101 !
+b101 "
+b100 !
+b100 "
+0Q
+0P
+1O
+0U
+0T
+1S
+0>
+0=
+#840000
+b101 !
+b101 "
+1Q
+1U
+1>
+1=
+#880000
+b111 !
+b111 "
+b110 !
+b110 "
+0Q
+1P
+0U
+1T
+#920000
+b111 !
+b111 "
+1Q
+1U
+#960000
+b1111 !
+b1111 "
+b1011 !
+b1011 "
+b1001 !
+b1001 "
+b1000 !
+b1000 "
+0Q
+0P
+0O
+1N
+0U
+0T
+0S
+1R
+0>
+0=
+0?
+1@
+0@
+1D
+0D
+0G
+1G
+0M
+0L
+1I
+10
+1(
+1M
+1L
+0I
+0/
+0-
+1)
+00
+0(
+1/
+1-
+0)
+#1000000

@@ -1,0 +1,377 @@
+Analysis & Synthesis report for PBL_Final
+Tue Oct 04 22:21:43 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "complemento2:complem2"
+ 10. Port Connectivity Checks: "somador4bits:soma_senhas"
+ 11. Port Connectivity Checks: "complemento2:complemento_b|somador4bits:complemento_de2"
+ 12. Port Connectivity Checks: "complemento2:complemento_b"
+ 13. Port Connectivity Checks: "comparador:comp_AB"
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Oct 04 22:21:43 2022       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; PBL_Final                                   ;
+; Top-level Entity Name       ; Arquivo_principal                           ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 22                                          ;
+; Total pins                  ; 23                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; Arquivo_principal  ; PBL_Final          ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; Arquivo_principal.v              ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v      ;         ;
+; complemento2.v                   ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/complemento2.v           ;         ;
+; somador_completo.v               ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/somador_completo.v       ;         ;
+; somador4bits.v                   ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/somador4bits.v           ;         ;
+; comparador.v                     ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/comparador.v             ;         ;
+; operacao_resultadoparc.v         ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/operacao_resultadoparc.v ;         ;
+; ponto.v                          ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/ponto.v                  ;         ;
+; a.v                              ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/a.v                      ;         ;
+; b.v                              ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/b.v                      ;         ;
+; c.v                              ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/c.v                      ;         ;
+; d.v                              ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/d.v                      ;         ;
+; e.v                              ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/e.v                      ;         ;
+; f.v                              ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/f.v                      ;         ;
+; g.v                              ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/g.v                      ;         ;
+; led_vermelho.v                   ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/led_vermelho.v           ;         ;
+; led_azul.v                       ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/led_azul.v               ;         ;
+; led_verde.v                      ; yes             ; User Verilog HDL File  ; D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/led_verde.v              ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 22    ;
+;     -- Combinational with no register       ; 22    ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 17    ;
+;     -- 3 input functions                    ; 1     ;
+;     -- 2 input functions                    ; 4     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 22    ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 23    ;
+; Maximum fan-out node                        ; b[0]  ;
+; Maximum fan-out                             ; 10    ;
+; Total fan-out                               ; 90    ;
+; Average fan-out                             ; 2.00  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                   ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node           ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                               ; Entity Name            ; Library Name ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |Arquivo_principal                   ; 22 (0)      ; 0            ; 0          ; 23   ; 0            ; 22 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal                                                                                ; Arquivo_principal      ; work         ;
+;    |a:resul_a|                       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|a:resul_a                                                                      ; a                      ; work         ;
+;    |c:resul_c|                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|c:resul_c                                                                      ; c                      ; work         ;
+;    |comparador:comp_AB|              ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|comparador:comp_AB                                                             ; comparador             ; work         ;
+;    |complemento2:complem2|           ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|complemento2:complem2                                                          ; complemento2           ; work         ;
+;       |somador4bits:complemento_de2| ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|complemento2:complem2|somador4bits:complemento_de2                             ; somador4bits           ; work         ;
+;          |somador_completo:part2|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|complemento2:complem2|somador4bits:complemento_de2|somador_completo:part2      ; somador_completo       ; work         ;
+;    |complemento2:complemento_b|      ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|complemento2:complemento_b                                                     ; complemento2           ; work         ;
+;       |somador4bits:complemento_de2| ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|complemento2:complemento_b|somador4bits:complemento_de2                        ; somador4bits           ; work         ;
+;          |somador_completo:part2|    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|complemento2:complemento_b|somador4bits:complemento_de2|somador_completo:part2 ; somador_completo       ; work         ;
+;    |complemento2_negativos:comb_8|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|complemento2_negativos:comb_8                                                  ; complemento2_negativos ; work         ;
+;    |e:resul_e|                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|e:resul_e                                                                      ; e                      ; work         ;
+;    |f:resul_f|                       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|f:resul_f                                                                      ; f                      ; work         ;
+;    |led_verde:acend_verde|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|led_verde:acend_verde                                                          ; led_verde              ; work         ;
+;    |ponto:ponto_mostrador|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|ponto:ponto_mostrador                                                          ; ponto                  ; work         ;
+;    |somador4bits:soma_senhas|        ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|somador4bits:soma_senhas                                                       ; somador4bits           ; work         ;
+;       |somador_completo:part1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|somador4bits:soma_senhas|somador_completo:part1                                ; somador_completo       ; work         ;
+;       |somador_completo:part2|       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|somador4bits:soma_senhas|somador_completo:part2                                ; somador_completo       ; work         ;
+;       |somador_completo:part3|       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Arquivo_principal|somador4bits:soma_senhas|somador_completo:part3                                ; somador_completo       ; work         ;
++--------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "complemento2:complem2" ;
++------+--------+----------+------------------------+
+; Port ; Type   ; Severity ; Details                ;
++------+--------+----------+------------------------+
+; cout ; Output ; Info     ; Explicitly unconnected ;
++------+--------+----------+------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "somador4bits:soma_senhas" ;
++------+--------+----------+---------------------------+
+; Port ; Type   ; Severity ; Details                   ;
++------+--------+----------+---------------------------+
+; cin  ; Input  ; Info     ; Explicitly unconnected    ;
+; cout ; Output ; Info     ; Explicitly unconnected    ;
++------+--------+----------+---------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "complemento2:complemento_b|somador4bits:complemento_de2" ;
++------+-------+----------+-----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                   ;
++------+-------+----------+-----------------------------------------------------------+
+; b    ; Input ; Info     ; Explicitly unconnected                                    ;
++------+-------+----------+-----------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "complemento2:complemento_b" ;
++------+--------+----------+-----------------------------+
+; Port ; Type   ; Severity ; Details                     ;
++------+--------+----------+-----------------------------+
+; cin  ; Input  ; Info     ; Stuck at VCC                ;
+; cout ; Output ; Info     ; Explicitly unconnected      ;
++------+--------+----------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "comparador:comp_AB"                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; aeqb ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; agtb ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Oct 04 22:21:34 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PBL_Final -c PBL_Final
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file arquivo_principal.v
+    Info (12023): Found entity 1: Arquivo_principal File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file complemento2.v
+    Info (12023): Found entity 1: complemento2 File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/complemento2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file somador_completo.v
+    Info (12023): Found entity 1: somador_completo File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/somador_completo.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file somador4bits.v
+    Info (12023): Found entity 1: somador4bits File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/somador4bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparador.v
+    Info (12023): Found entity 1: comparador File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/comparador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file operacao_resultadoparc.v
+    Info (12023): Found entity 1: complemento2_negativos File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/operacao_resultadoparc.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ponto.v
+    Info (12023): Found entity 1: ponto File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/ponto.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file a.v
+    Info (12023): Found entity 1: a File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/a.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file b.v
+    Info (12023): Found entity 1: b File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/b.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file c.v
+    Info (12023): Found entity 1: c File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/c.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file d.v
+    Info (12023): Found entity 1: d File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/d.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file e.v
+    Info (12023): Found entity 1: e File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/e.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file f.v
+    Info (12023): Found entity 1: f File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/f.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file g.v
+    Info (12023): Found entity 1: g File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/g.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file led_vermelho.v
+    Info (12023): Found entity 1: led_vermelho File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/led_vermelho.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file led_azul.v
+    Info (12023): Found entity 1: led_azul File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/led_azul.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file led_verde.v
+    Info (12023): Found entity 1: led_verde File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/led_verde.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at ponto.v(7): created implicit net for "aux1" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/ponto.v Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at Arquivo_principal.v(29): instance has no name File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 29
+Info (12127): Elaborating entity "Arquivo_principal" for the top level hierarchy
+Info (12128): Elaborating entity "comparador" for hierarchy "comparador:comp_AB" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 17
+Info (12128): Elaborating entity "complemento2" for hierarchy "complemento2:complemento_b" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 20
+Info (12128): Elaborating entity "somador4bits" for hierarchy "complemento2:complemento_b|somador4bits:complemento_de2" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/complemento2.v Line: 15
+Info (12128): Elaborating entity "somador_completo" for hierarchy "complemento2:complemento_b|somador4bits:complemento_de2|somador_completo:part1" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/somador4bits.v Line: 9
+Info (12128): Elaborating entity "complemento2_negativos" for hierarchy "complemento2_negativos:comb_8" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 29
+Info (12128): Elaborating entity "ponto" for hierarchy "ponto:ponto_mostrador" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 32
+Info (12128): Elaborating entity "a" for hierarchy "a:resul_a" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 35
+Info (12128): Elaborating entity "b" for hierarchy "b:resul_b" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 38
+Info (12128): Elaborating entity "c" for hierarchy "c:resul_c" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 41
+Info (12128): Elaborating entity "d" for hierarchy "d:resul_d" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 44
+Info (12128): Elaborating entity "e" for hierarchy "e:resul_e" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 47
+Info (12128): Elaborating entity "f" for hierarchy "f:resul_f" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 50
+Info (12128): Elaborating entity "g" for hierarchy "g:resul_g" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 53
+Info (12128): Elaborating entity "led_vermelho" for hierarchy "led_vermelho:acend_vermelho" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 56
+Info (12128): Elaborating entity "led_azul" for hierarchy "led_azul:acend_azul" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 59
+Info (12128): Elaborating entity "led_verde" for hierarchy "led_verde:acend_verde" File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 62
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dig1" is stuck at GND File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 4
+    Warning (13410): Pin "dig2" is stuck at VCC File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 4
+    Warning (13410): Pin "dig3" is stuck at VCC File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 4
+    Warning (13410): Pin "dig4" is stuck at VCC File: D:/UEFS - 2022.2/PBL - Circuitos Digitais/PBL 1 - Cofre/PBL/Arquivo_principal.v Line: 4
+Info (21057): Implemented 45 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 22 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Tue Oct 04 22:21:43 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:19
+
+

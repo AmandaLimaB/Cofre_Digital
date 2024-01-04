@@ -1,0 +1,5 @@
+module led_verde(resposta, verde);
+	input [3:0] resposta;
+	output verde;
+	
+endmodule 

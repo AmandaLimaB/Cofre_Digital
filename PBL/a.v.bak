@@ -1,0 +1,6 @@
+module a(resposta, dig_a);
+	input [3:0] resposta;
+	output dig_a;
+	
+	and and0(dig_a, resposta[3], resposta[2]);
+endmodule 
